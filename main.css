@@ -44,6 +44,9 @@ pre{
     color: var(--color-text);
     transition: color 0.2s linear;
 }
+.general-link.colored{
+    color: var(--color-highlight);
+}
 .general-link:hover{
     color: var(--color-second);
 }
