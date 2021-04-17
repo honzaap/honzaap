@@ -1,0 +1,52 @@
+body{
+    background-color: var(--color-main);
+}
+pre{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.d-flex {
+    display: flex!important;
+    flex-flow: row wrap;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #454545;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 50, 85);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-highlight);
+}
+.cds{
+    width: 1.5em;
+    height: 1.5em;
+}
+.cds .in{
+    fill: var(--color-main2);
+}
+.cds .out{
+    fill: var(--color-white);
+    transition: fill 0.2s linear;
+}
+.general-link{
+    color: var(--color-text);
+    transition: color 0.2s linear;
+}
+.general-link:hover{
+    color: var(--color-second);
+}
+.general-link:hover .cds .out{
+    fill: var(--color-second);
+}

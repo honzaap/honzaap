@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <link rel="stylesheet" href="typo.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="background.css">
+    <title>Jan Pánek - Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-transparent text-text" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" onclick="goTo('about');">
+                    <span class="brand-l">&lt;</span>
+                    <span class="brand-m">Jan-Pánek</span>
+                    <span class="brand-r">/&gt;</span>
+                </a>
+                <button class="navbar-toggler text-text" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="goTo('about');">O mě</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="goTo('projects');">Projekty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="goTo('contact');">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="about" id="about">
+            <div class="about-content-container">
+                <span class="section-caption">&lt;about-me&gt;</span>
+                <div class="about-content">
+                    <h1><span class="heading-caption">Ahoj <span class="emoji hand">👋</span>, já jsem</span><br>Honza</h1>
+                    <div class="position-relative">
+                        <p class="about-description">Vášnivý vývojář responzivních webových aplikací za pomocí ASP.NET
+                            Core / JavaScriptu / Angularu a dalších knihoven a frameworků <span class="emoji rocket">🚀</span>.
+                       </p>
+                        <div class="about-image">
+                            <i></i>
+                            <i></i>
+                            <img src="images/software enginner.svg">
+                        </div>
+                    </div>
+
+                    <div class="code-window about-code">
+                        <span class="section-caption mx-0">&gt;</span>
+                        <div class="code-container bg-main-dark">
+                            <pre class="code">
+<span class="comm">// About me</span>
+<span class="var">about</span>: {
+ firstName: <span class="text">"Jan"</span>;
+ lastName: <span class="text">"Pánek"</span>;
+ skills: {
+  frontend: [<span class="text">"Angular"</span>, <span class="text">"JavaScript"</span>, <span class="text">"JQuery"</span>, <span class="text">"CSS"</span>];
+  backend: [<span class="text">"ASP.NET Core"</span>, <span class="text">"Nginx"</span>, <span class="text">"Apache"</span>];
+  database: [<span class="text">"MySQL"</span>, <span class="text">"SQL Server"</span>, <span class="text">"PostgreSQL"</span>];
+  }
+}
+                            </pre>
+                        </div>
+                        <span class="section-caption mx-0">&lt;</span>
+                    </div>
+                </div>
+                <span class="section-caption">&lt;/about-me&gt;</span>
+                <div class="next-section-container">
+                    <span class="next-section-caption">Prohlédnout projekty</span>
+                    <button onclick="goTo('projects')" class="next-section-button" id="goto-projects">
+                    </button>
+                    <script>
+                        let button = document.getElementById("goto-projects");
+                        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                            button.innerHTML = '<i class="fas fa-fingerprint"></i>'
+                        }
+                        else{
+                            button.innerHTML = "<i class='fas fa-mouse'></i>"
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="projects-content-container">
+                <div class="projects-content">
+                    <div class="projects-side">
+                        <div class="poster">
+                            <h2>Moje projekty</h2>
+                            <span class="line"></span>
+                            <p>Zde jsou mé projekty, které jsem vytvořil za posledních několik měsíců </p>
+                            <img src="images/Stripe.svg">
+                        </div>
+                        <div class="code-window projects-code ms-auto">
+                            <span class="section-caption mx-0">&gt;</span>
+                            <div class="code-container bg-main2">
+                                <pre class="code">
+<span class="comm">// Latest projects</span>
+<span class="var">projects</span>: {
+ netblog: <span class="text">Blog vytvořený v ASP.NET Core."</span>;
+ pathfinding: <span class="text">"Vizualizace algoritmů pro nalezení cesty."</span>;
+ sorting: <span class="text">"Vizualizace řadících algoritmů."</span>;
+}
+                                </pre>
+                            </div>
+                            <span class="section-caption mx-0">&lt;</span>
+                        </div>
+                    </div>
+                    <div class="project-main-container">
+                        <span class="section-caption">&lt;projects&gt;</span>
+                        <div class="project-showcase-container">
+                            <div class="project-showcase netblog" id="project-showcase"> <!--main board-->
+                                <div class="content-netblog">
+                                    <div class="project-about">
+                                        <h3 class="project-about-title">NETBlog</h3>
+                                        <p class="project-about-description">Blogová aplikace s klasickými funkcemi, jako je přihlášení a registrace, přidávání a hodnocení příspěvků a komentářů, odesílání emailů a další. </p>
+                                        <div class="project-about-section">
+                                            <h5>Co mě tento projekt naučil:</h5>
+                                            <ul>
+                                                <li>Vytvoření ASP.NET Core aplikace za použití tzv. "Clean Architecture"</li>
+                                                <li>Nasazení webu na Nginx server a zabezpečení pomocí TLS 1.3</li>
+                                                <li>Použití CQRS paternu v ASP.NET Core</li>
+                                                <li>Spravování dat a uživatelů v databázi</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="project-about-section">
+                                                <h5>Použité technologie</h5>
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-globe"></i>
+                                                        Webový framework: ASP.NET Core</li>
+                                                    <li>
+                                                        <i class="fas fa-database"></i>
+                                                        Databáze: MySQL</li>
+                                                    <li>
+                                                        <i class="fas fa-cube"></i>
+                                                        ORM: Entity Framework Core </li>
+                                                    <li>
+                                                        <i class="far fa-window-maximize"></i>
+                                                        Frontend: HTML | CSS | JavaScript | JQuery</li>
+                                                    <li>
+                                                        <i class="fas fa-globe"></i>
+                                                        Server: Nginx</li>
+                                                </ul>
+                                            </div>
+                                            <div class="project-about-links">
+                                                <button disabled class="btn btn-dark">
+                                                    <i class="fab fa-github"></i>
+                                                    Soukromý
+                                                </button>
+                                                <a target="_blank" href="https://netblog.cz" class="btn btn-second">
+                                                    Vyzkoušet
+                                                    <i class="fas fa-arrow-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-pathfinding">
+                                    <div class="project-about">
+                                        <h3 class="project-about-title">Pathfinding Visualizer</h3>
+                                        <p class="project-about-description">Vizualizace hledání cesty na 2D desce. Na výběr jsou algoritmy jak pro hledání cesty, tak vytvoření bludiště ve kterém lze hledat. </p>
+                                        <div class="project-about-section">
+                                            <h5>Co mě tento projekt naučil:</h5>
+                                            <ul>
+                                                <li>Zdokonalení v používání JavaScriptu pro vytváření dynamické stránky</li>
+                                                <li>Podrobné porozumění pathfinding algoritmů</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="project-about-section">
+                                                <h5>Použité technologie</h5>
+                                                <ul>
+                                                    <li><i class="fab fa-js"></i>Vanilla JavaScript</li>
+                                                    <li><i class="fab fa-css3-alt"></i>CSS</li>
+                                                    <li><i class="fab fa-html5"></i>HTML</li>
+                                                </ul>
+                                            </div>
+                                            <div class="project-about-links">
+                                                <a target="_blank" href="https://github.com/honzaap/Pathfinding" class="btn btn-dark">
+                                                    <i class="fab fa-github"></i>
+                                                    GitHub
+                                                </a>
+                                                <a target="_blank" href="https://honzaap.github.io/Pathfinding/" class="btn btn-second">
+                                                    Vyzkoušet
+                                                    <i class="fas fa-arrow-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-sorting">
+                                    <div class="project-about">
+                                        <h3 class="project-about-title">Sorting Visualizer</h3>
+                                        <p class="project-about-description">Vizualizace nejznámějších řadících algorimů jako jsou třeba Quick Sort, Merge Sort a mnohé další.</p>
+                                        <div class="project-about-section">
+                                            <h5>Co mě tento projekt naučil:</h5>
+                                            <ul>
+                                                <li>Zdokonalení v používání JavaScriptu pro vytváření dynamické stránky</li>
+                                                <li>Podrobné porozumění řadícíh algoritmů a jejich časové komplexity</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="project-about-section">
+                                                <h5>Použité technologie</h5>
+                                                <ul>
+                                                    <li><i class="fab fa-js"></i>Vanilla JavaScript</li>
+                                                    <li><i class="fab fa-css3-alt"></i>CSS</li>
+                                                    <li><i class="fab fa-html5"></i>HTML</li>
+                                                </ul>
+                                            </div>
+                                            <div class="project-about-links">
+                                                <a target="_blank" href="https://github.com/honzaap/Sorting" class="btn btn-dark">
+                                                    <i class="fab fa-github"></i>
+                                                    GitHub
+                                                </a>
+                                                <a target="_blank" href="https://honzaap.github.io/Sorting/" class="btn btn-second">
+                                                    Vyzkoušet
+                                                    <i class="fas fa-arrow-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="project-selection" id="project-selection">
+                                <div class="netblog">
+                                    <span class="selection-caption fs-4">
+                                        <span>
+                                            NETBlog
+                                        </span>
+                                    </span>
+                                    <div class="selection-main">
+                                        <div class="selection-main-image-container">
+                                            <div class="selection-main-image">
+                                                <div class="selection-show-more">
+                                                    <button class="btn btn-second">Zobrazit více</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pathfinding">
+                                    <span class="selection-caption fs-5">
+                                        <span>
+                                            Pathfinding vizualizace
+                                        </span>
+                                    </span>
+                                    <div class="selection-main">
+                                        <div class="selection-main-image-container">
+                                            <div class="selection-main-image">
+                                                <div class="selection-show-more">
+                                                    <button class="btn btn-second">Zobrazit více</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sorting">
+                                    <span class="selection-caption fs-5">
+                                        <span>
+                                            Vizualizace řazení
+                                        </span>
+                                    </span>
+                                    <div class="selection-main">
+                                        <div class="selection-main-image-container">
+                                            <div class="selection-main-image">
+                                                <div class="selection-show-more">
+                                                    <button class="btn btn-second">Zobrazit více</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <span class="section-caption">&lt;/projects&gt;</span>
+                    </div>
+                </div>         
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <div class="poster">
+                    <h2>Kontakt</h2>
+                    <span class="line"></span>
+                    <p>Kontaktujte mě v kteroukoliv dobu! </p>
+                    <img src="images/Stripe.svg">
+                </div>
+                <div class="contact-main-container">
+                    <span class="section-caption">&lt;/contact&gt;</span>
+                    <div class="contact-main">
+                        <div class="contact-section">
+                            <h3>Kontakt</h3>
+                            <ul>
+                                <li><i class="far fa-envelope"></i>janpane019@pslib.cz</li>
+                                <li><i class="fas fa-phone-alt"></i>+420 604 305 268</li>
+                                <li><a target="_blank" href="https://github.com/honzaap" class="general-link"><i class="fab fa-github"></i>/honzaap</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-section">
+                            <h3>Coding challenges</h3>
+                            <ul>
+                                <li><a target="_blank" href="https://www.hackerrank.com/janpane019" class="general-link"><i class="fab fa-hackerrank"></i>/janpane019</a></li>
+                                <li><a target="_blank" href="https://app.codesignal.com/profile/honzaap" class="general-link"><svg class="cds" xmlns="http://www.w3.org/2000/svg" width="233" height="233" viewBox="0 0 233 233" fill="none"><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-custom-link"/><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-general-link"/>
+
+                                    <path class="out" fill-rule="evenodd" clip-rule="evenodd" d="M115.687 73.0938L113.392 62.2198L12 48L44.5456 97.3512L51.2217 98.1877L68.329 126L83.7673 127.882L116.313 204L148.024 127.882L163.88 126.627L180.987 98.1877L186.828 97.3512L220 48L118.399 62.2198L115.687 73.0938Z" fill="white"/>
+                                    <path class="in" fill-rule="evenodd" clip-rule="evenodd" d="M100.033 76.0413L42.012 65.5657L53.6996 83.5837L87.9278 88.193L91.2671 99.9257L68.7266 97.8305L77.4924 112.496L95.65 113.963L116.521 175.979L137.183 113.963L155.549 112.496L164.315 97.8305L141.775 99.9257L145.114 88.193L179.342 83.5837L191.238 65.5657L132.591 76.0413L116.312 138.057L100.033 76.0413Z" fill="#1F69FF"/>
+                                    </svg>/honzaap</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="section-caption">&lt;/contact&gt;</span>
+                </div>
+            </div>
+            <footer>
+                <img src="images/Stripe_UP.svg">
+                <div class="footer">
+                    <div class="contact-main">
+                        <div class="contact-section">
+                            <h3>Kontakt</h3>
+                            <ul>
+                                <li><i class="far fa-envelope"></i>janpane019@pslib.cz</li>
+                                <li><i class="fas fa-phone-alt"></i>+420 604 305 268</li>
+                                <li><a target="_blank" href="https://github.com/honzaap" class="general-link"><i class="fab fa-github"></i>/honzaap</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-section">
+                            <h3>Další odkazy</h3>
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100010297606354" class="general-link"><i class="fab fa-facebook"></i>Honza Pánek</a></li>
+                                <li><a target="_blank" href="https://www.hackerrank.com/janpane019" class="general-link"><i class="fab fa-hackerrank"></i>/janpane019</a></li>
+                                <li><a target="_blank" href="https://app.codesignal.com/profile/honzaap" class="general-link"><svg class="cds" xmlns="http://www.w3.org/2000/svg" width="233" height="233" viewBox="0 0 233 233" fill="none"><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-custom-link"/><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-general-link"/>
+                                    <path class="out" fill-rule="evenodd" clip-rule="evenodd" d="M115.687 73.0938L113.392 62.2198L12 48L44.5456 97.3512L51.2217 98.1877L68.329 126L83.7673 127.882L116.313 204L148.024 127.882L163.88 126.627L180.987 98.1877L186.828 97.3512L220 48L118.399 62.2198L115.687 73.0938Z" fill="white"/>
+                                    <path class="in" fill-rule="evenodd" clip-rule="evenodd" d="M100.033 76.0413L42.012 65.5657L53.6996 83.5837L87.9278 88.193L91.2671 99.9257L68.7266 97.8305L77.4924 112.496L95.65 113.963L116.521 175.979L137.183 113.963L155.549 112.496L164.315 97.8305L141.775 99.9257L145.114 88.193L179.342 83.5837L191.238 65.5657L132.591 76.0413L116.312 138.057L100.033 76.0413Z" fill="#1F69FF"/>
+                                    </svg>/honzaap</a>
+                                </li>                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom-links">
+                        <a class="footer-bottom-link" onclick="goTo('about');">O mě</a> |   
+                        <a class="footer-bottom-link" onclick="goTo('projects');">Projekty</a> |   
+                        <a class="footer-bottom-link" onclick="goTo('contact');">Kontakt</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+    <main id="main2"></main>
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="Strip.svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 15"
+   height="15mm"
+   width="210mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="107.86277"
+     inkscape:cx="397.28647"
+     inkscape:zoom="1.4"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Vrstva 1">
+    <path
+       d="M -0.0227376,-0.09474383 V 12.742021 h 2.9372883 l 3.054594,2.256324 3.1589803,-2.256324 h 9.618534 l 2.050004,-1.152748 1.750798,1.152748 H 45.49128 l 1.765266,1.387728 2.067576,-1.387728 h 33.457387 l 0.507463,-0.542403 1.09864,0.542403 h 20.408058 l 1.88567,1.22144 h 3.60805 l 1.49965,-1.22144 h 14.5309 l 1.30534,-1.128725 h 6.36654 l 1.54874,1.128725 h 23.58254 l 1.42627,-1.111834 1.41697,1.111834 h 1.0728 l -0.0145,0.0075 0.59945,0.596456 2.99775,-0.0015 0.84852,-0.581816 -0.0269,-0.02064 h 42.84493 V -0.09474383 Z"
+       style="fill:#1e5f74;fill-opacity:1;fill-rule:evenodd;stroke-width:0.427099;stroke-opacity:0.969231"
+       id="rect849" />
+  </g>
+</svg>

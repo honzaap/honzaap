@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26mm"
+   height="25mm"
+   viewBox="0 0 26 25"
+   version="1.1"
+   id="svg1917"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="Codesignal.svg">
+  <defs
+     id="defs1911" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="21.971723"
+     inkscape:cy="43.343383"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1914">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2529"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.337031px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 25.812872,0.20235427 13.647671,2.378102 0.22442601,0.24142157 0.72187699,2.4646511 4.6949963,11.736823 l 3.2665945,0.89975 5.2059322,11.981639 5.373913,-12.09824 3.053194,-0.762713 3.929142,-9.2517373 z M 3.3086221,2.2206309 10.266447,4.8423468 13.000264,14.978807 16.362744,4.2954047 22.76256,2.2560918 23.087705,4.1613738 18.539993,5.628501 17.159387,9.35492 19.929252,9.2930128 19.029514,10.927228 16.70303,11.051041 12.991613,20.630943 9.4344786,11.040824 7.1087148,10.916409 6.0467651,9.2737801 8.9550509,9.3164536 7.4626983,6.0408113 2.9834766,4.2389072 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Vrstva 2" />
+</svg>
