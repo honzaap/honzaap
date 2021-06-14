@@ -629,6 +629,7 @@ footer{
     }
     .project-selection{
         flex-flow: column nowrap;
+        height: 100vh;
     }
     .project-selection > div{
         width: 70vw;

@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 section{
     min-height: 100vh;
     width: 100vw;
@@ -73,6 +76,11 @@ main.bck-contact::after{
         position: absolute;
         transition: top 1s ease-out, transform 1s ease-out;
     }
+    html {
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;    
+    }
     #main2{
         display:block;
         overflow-x:hidden;
@@ -94,15 +102,12 @@ main.bck-contact::after{
     }
     section.inactive-top{
         top: -150vh;
-        transform:rotateZ(30deg);
     }
     section.inactive-bot{
         top: 150vh;
-        transform:rotateZ(-30deg);
     }
     section.active{
         top:0;
-        transform:rotateZ(0deg);
     }
 }
 
