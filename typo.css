@@ -1,28 +1,18 @@
-
-
-/* VARIABLES  */
 :root{
-    --color-main: #16213e;
-    --color-main2: #1d2d50;
-    --color-main-dark: #14203c;
-    --color-second: #903749;
-    --color-second2: #e84545;
-    --color-text: #f0ece2;
-    --color-highlight: #1e5f74;
-    --color-white: #fff;
+    --bg: rgb(7, 7, 7);
+    --text: #fff;
+    --grad: linear-gradient(90deg, rgb(17, 197, 224), rgb(81, 128, 244), rgb(183, 70, 252));
 }
-
 *{
     margin: 0;
     padding: 0;
 }
-/*  DEFAULT STYLES  */
 html{
     font-size: 16px;
+    font-family: "Roboto";
 }
-
 h1,h2,h3,h4,h5{
-    font-family: "Source sans pro";
+    font-weight: 700;
 }
 ul{
     list-style: none;
@@ -31,79 +21,10 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
 p,span,button,a, option, li{
     text-decoration: none;
-    font-family: "Ubuntu";
-    /*color: var(--color-text);*/
     color: inherit;
 }
-
-.btn{
-    border-radius: 0;
-    padding: 0.1em 0.2em;
-}
-
-/*  FONT STYLES  */
-.font-roboto{
-    font-family: "Roboto";
-}
-.font-sspro{
-    font-family: "Source sans pro";
-}
-.font-ubuntu{
-    font-family: "Ubuntu";
-}
-
-/*  COLOR STYLES  */
-.text-main{
-    color: var(--color-main);
-}
-.text-main2{
-    color: var(--color-main2);
-}
-.text-second{
-    color: var(--color-second);
-}
-.text-second2{
-    color: var(--color-second2);
-}
-.text-text{
-    color: var(--color-text);
-}
-.text-highlight{
-    color: var(--color-highlight);
-}
-.text-white{
-    color: var(--color-white);
-}
-
-/*  BACKGROUND COLOR STYLES  */
-.bg-main{
-    background-color: var(--color-main);
-}
-.bg-main2{
-    background-color: var(--color-main2);
-}
-.bg-main-dark{
-    background-color: var(--color-main-dark);
-}
-.bg-second{
-    background-color: var(--color-second);
-}
-.bg-second2{
-    background-color: var(--color-second2);
-}
-.bg-text{
-    background-color: var(--color-text);
-}
-.bg-highlight{
-    background-color: var(--color-highlight);
-}
-.bg-white{
-    background-color: var(--color-white);
-}
-
 
 @media screen and (max-width: 560px){
     html{

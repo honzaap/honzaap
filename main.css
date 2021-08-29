@@ -1,55 +1,100 @@
 body{
-    background-color: var(--color-main);
+    background: linear-gradient(225deg, #000, #080808);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
-pre{
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+h1{
+    font-size: 4rem;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.d-flex {
-    display: flex!important;
-    flex-flow: row wrap;
+.title-container{
+    padding-top: 10em;
 }
-/* width */
-::-webkit-scrollbar {
-    width: 0.8rem;
+.ico{
+    width: 1em;
+    height: 1em;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
+.ico-codesignal{
+    display: block;
+    background: #fff;
+    mask: url("./images/Codesignal.svg");
+    -webkit-mask: url("./images/Codesignal.svg");
+}
+.nav-links{
+    gap: 1em;
+    margin: 0.5em 1em;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+}
+.nav-links .ico{
     background: #454545;
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(35, 50, 85);
+.nav-links a{
+    color: #454545;
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color-highlight);
+.nav-links a.ico-codesignal:hover{
+    background: rgb(0, 74, 225);
 }
-.cds{
-    width: 1.5em;
-    height: 1.5em;
+.link-mail:hover{
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.cds .in{
-    fill: var(--color-main2);
+.link-github:hover{
+    color: #fff;
 }
-.cds .out{
-    fill: var(--color-white);
-    transition: fill 0.2s linear;
+.link-twitter:hover{
+    color: rgb(28, 159, 240);
 }
-.general-link{
-    color: var(--color-text);
-    transition: color 0.2s linear;
+.link-linkedin:hover{
+    color: rgb(0, 115, 178);
 }
-.general-link.colored{
-    color: var(--color-highlight);
+.link-hackerrank:hover{
+    color: rgb(0, 239, 100);
 }
-.general-link:hover{
-    color: var(--color-second);
+.link-project{
+    color: #fff;
 }
-.general-link:hover .cds .out{
-    fill: var(--color-second);
+.link-project:hover{
+    background: linear-gradient(225deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.systemizer-container{
+    max-width: 770px;
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+.systemizer-frame{
+    border-radius: 20px;
+    width: 100%;
+    height: 40vw;
+    min-height: 275px;
+    max-height: 400px;
+}
+@media screen and (max-width: 560px){
+    h1{
+        font-size: 3rem;
+    }
+    .nav-links{
+        text-align: center;
+        justify-content: center !important;
+    }
+    .link-mail{
+        flex-basis: 100%;
+    }
+}
+@media screen and (min-width: 2560px){
+    .systemizer-container{
+        max-width: 1300px;
+    }
+    .systemizer-frame{
+        max-height: 650px;
+    }
 }
