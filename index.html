@@ -4,52 +4,104 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jan Pánek - portfolio website">
+        <meta name="keywords" content="portfolio, personal website">        
         <link rel="icon" href="favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700;900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link rel="stylesheet" href="typo.css">
         <link rel="stylesheet" href="main.css">
         <title>Jan Pánek</title>
     </head>
     <body>
-        <div class="d-flex justify-content-center align-items-center title-container">
-            <h1>Jan&nbsp;Pánek</h1>
+        <nav class="text-end p-3">
+            <a target="_blank" href="https://github.com/honzaap/honzaap"><h1>Jan Pánek</h1></a>
+        </nav>
+        <div class="container-xxxl">
+            <div class="circular-menu">
+                <div class="menu-content" id="menuContent">
+                    <a href="https://app.codesignal.com/profile/honzaap" class="menu-link">
+                        <img class="ico" src="./images/codesignal.svg" alt="CodeSignal">
+                    </a>
+                    <a href="https://www.hackerrank.com/honzaap" class="menu-link">
+                        <img class="ico" src="./images/hackerrank.svg" alt="HackerRank">
+                    </a>
+                    <a href="https://pinterest.com/honzaaap/" class="menu-link">
+                        <img class="ico" src="./images/pinterest.svg" alt="pinterest">
+                    </a>
+                    <a href="mailto:paneja2@seznam.cz" class="menu-link">
+                        <img class="ico" src="./images/email.svg" alt="Email">
+                    </a>
+                    <a href="https://github.com/honzaap" class="menu-link">
+                        <img class="ico" src="./images/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://twitter.com/honzaap1" class="menu-link">
+                        <img class="ico" src="./images/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jan-p%C3%A1nek-a6887b20b/" class="menu-link">
+                        <img class="ico" src="./images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </div>
+                <button class="menu-toggle d-flex justify-content-center align-items-center" id="menuToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </i>
+                </button>
+            </div>
+    
+            <h3 class="text-center mb-4">Some of my projects</h3>
+            <div class="row">
+                <div class="card-col col-12 col-md-6 col-xxl-3 my-4">
+                    <a href="https://honzaap.github.io/Systemizer" class="project-card systemizer">
+                        <div class="content">
+                            <h3>Systemizer</h3>
+                            <p>A system design tool that allows you to simulate data flow of distributed systems.</p>
+                        </div>
+                        <img class="card-image" src="./images/systemizer.PNG" alt="Systemizer">
+                    </a>
+                </div>
+                <div class="card-col col-12 col-md-6 col-xxl-3 my-4">
+                    <a href="https://honzaap.github.io/GithubCity" class="project-card githubcity">
+                        <div class="content">
+                            <h3>GitHub City</h3>
+                            <p>Create a 3D city from your GitHub contributions 🏙</p>
+                        </div>
+                        <img class="card-image" src="./images/githubcity.PNG" alt="GitHub City">
+                    </a>
+                </div>
+                <div class="card-col col-12 col-md-6 col-xxl-3 my-4">
+                    <a href="https://honzaap.github.io/Pathfinding" class="project-card pathfinding">
+                        <div class="content">
+                            <h3>Pathfinding</h3>
+                            <p>Visualizer of various pathfinding algorithms.</p>
+                        </div>
+                        <div class="bg">
+                            <img src="./images/pathfinding.PNG" class="card-bg" alt="Pathfinding">
+                        </div>
+                        <img class="card-image" src="./images/pathfinding_transparent.PNG" alt="Pathfinding">
+                    </a>
+                </div>
+                <div class="card-col col-12 col-md-6 col-xxl-3 my-4">
+                    <a href="https://honzaap.github.io/MyRoom" class="project-card myroom">
+                        <div class="content">
+                            <h3>My Room</h3>
+                            <p>A room where all the magic happens 🌟 - My room in 3D I made just for fun :)</p>
+                        </div>
+                        <img class="card-image" src="./images/myroom.PNG" alt="My Room">
+                    </a>
+                </div>
+            </div>
+            <p class="text-center mt-5">...and more on <a class="link-underline" href="https://github.com/honzaap">GitHub</a></p>
         </div>
-        <div class="nav-links d-flex align-items-center justify-content-end position-absolute end-0 start-0 top-0">
-            <a target="_blank" class="link-mail" href="mailto:janpane019@pslib.cz">
-                janpane019@pslib.cz
-            </a>
-            <a target="_blank" class="link-github" href="https://github.com/honzaap">
-                <i class="fab fa-github"></i>
-            </a>
-            <a target="_blank" class="link-twitter" href="https://twitter.com/honzaap1">
-                <i class="fab fa-twitter-square"></i>
-            </a>
-            <a target="_blank" class="link-linkedin" href="https://www.linkedin.com/in/jan-p%C3%A1nek-a6887b20b/">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a target="_blank" class="link-hackerrank" href="https://www.hackerrank.com/janpane019">
-                <i class="fab fa-hackerrank"></i>
-            </a>
-            <a target="_blank" class="ico ico-codesignal" href="https://app.codesignal.com/profile/honzaap"></a>
-        </div>
-        <h4 class="text-center text-secondary mt-3 fs-5">Latest project: <a target="_blank" href="https://honzaap.github.io/Systemizer" class="link-project fw-bold fs-3">Systemizer</a></h4>
-        <p class="text-center fw-bold">System architecture tool</p>
-        <div class="systemizer-container">
-            <iframe frameborder="0" class="systemizer-frame" src="https://honzaap.github.io/Systemizer/create?viewer=eyJjb21wIjpbeyJpIjoiMWExYmMiLCJ0IjoiQyIsIm8iOnsiWCI6NzkwLCJZIjozODAsInR0IjoiQ2xpZW50IiwicCI6MCwiZVIiOnsiZSI6eyJ1IjoiLyIsInNNIjpbMCwxLDIsM119LCJtIjowfSwib1IiOjR9fSx7ImkiOiIyYzI1YSIsInQiOiJXUyIsImMiOltbIjJjMjVhIiwiNDM0ODMiLFt7IngiOjEwMTIuMSwieSI6NDQwLjF9LHsieCI6MTAxMi4xLCJ5Ijo0MDB9LHsieCI6MTEyMC41LCJ5Ijo0MDB9XV1dLCJvIjp7IlgiOjExMzAsIlkiOjM4MCwidHQiOiJXZWIgU2V2ZXIiLCJlcyI6W3sic00iOlswLDEsMiwzXSwicCI6MCwiYXMiOltdLCJnTSI6MCwidSI6Ii8ifV0sInBmIjoxMCwidCI6MH19LHsiaSI6IjY3ODFkIiwidCI6IldTIiwiYyI6W1siNjc4MWQiLCI0MzQ4MyIsW3sieCI6MTAxMi4xLCJ5Ijo0NDAuMX0seyJ4IjoxMDEyLjEsInkiOjQ4MH0seyJ4IjoxMTIwLjUsInkiOjQ4MH1dXV0sIm8iOnsiWCI6MTEzMCwiWSI6NDYwLCJ0dCI6IldlYiBTZXJ2ZXIgIzIiLCJlcyI6W3sic00iOlswLDEsMiwzXSwicCI6MCwiYXMiOltdLCJnTSI6MCwidSI6Ii8ifV0sInBmIjoxMCwidCI6MH19LHsiaSI6ImM1ODk4IiwidCI6IkMiLCJvIjp7IlgiOjc5MCwiWSI6NDYwLCJ0dCI6IkNsaWVudCIsInAiOjAsImVSIjp7ImUiOnsidSI6Ii8iLCJzTSI6WzAsMSwyLDNdfSwibSI6MH0sIm9SIjo0fX0seyJpIjoiNDM0ODMiLCJ0IjoiTEIiLCJjIjpbWyI0MzQ4MyIsIjFhMWJjIixbeyJ4Ijo4NDIuMSwieSI6NDAwLjF9LHsieCI6OTExLjYsInkiOjQwMC4xfSx7IngiOjkxMS42LCJ5Ijo0NDB9LHsieCI6OTQ4LjUsInkiOjQ0MH1dXSxbIjQzNDgzIiwiYzU4OTgiLFt7IngiOjg0Mi4xLCJ5Ijo0ODAuMX0seyJ4Ijo5NDguNSwieSI6NDgwLjF9LHsieCI6OTQ4LjUsInkiOjQ0MH1dXV0sIm8iOnsiWCI6OTYwLCJZIjo0MjAsInR0IjoiTG9hZCBCYWxhbmNlciIsInQiOjAsImFnIjowfX1dLCJzaG93VGl0bGVzIjpmYWxzZSwiZGFya01vZGUiOnRydWV9">
-            </iframe>
-        </div>
-        <div class="container text-center mt-4">
-            <h5>Other projects</h5>
-            <ul>
-                <li><a target="_blank" class="link-project fw-bold" href="https://honzaap.github.io/Pathfinding">Pathfinding visualizer</a></li>
-                <li><a target="_blank" class="link-project fw-bold" href="https://honzaap.github.io/Sorting">Sorting algorithm visualizer</a></li>
-                <li><a target="_blank" class="link-project fw-bold" href="https://honzaap.github.io/2048">2048 game</a></li>
-            </ul>
-        </div>
-        <p class="text-center mt-3">More projects on <a class="link-github" href="https://github.com/honzaap"><u>GitHub</u></a></p>
+
         <script src="main.js"></script>
     </body>
 </html>

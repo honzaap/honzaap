@@ -1,100 +1,217 @@
+:root{
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
 body{
-    background: linear-gradient(225deg, #000, #080808);
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: "Inconsolata";
+    font-weight: 600 !important;
+    background-color: rgba(138, 166, 141, 1);
+    color: #fff;
 }
 h1{
-    font-size: 4rem;
-    background: var(--grad);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-shadow: -3px 1px 3px rgba(0, 0, 0, 0.25);
 }
-.title-container{
-    padding-top: 10em;
-}
-.ico{
-    width: 1em;
-    height: 1em;
-}
-.ico-codesignal{
-    display: block;
-    background: #fff;
-    mask: url("./images/Codesignal.svg");
-    -webkit-mask: url("./images/Codesignal.svg");
-}
-.nav-links{
-    gap: 1em;
-    margin: 0.5em 1em;
-    font-size: 1.3rem;
-    flex-wrap: wrap;
-}
-.nav-links .ico{
-    background: #454545;
-}
-.nav-links a{
-    color: #454545;
-}
-.nav-links a.ico-codesignal:hover{
-    background: rgb(0, 74, 225);
-}
-.link-mail:hover{
-    background: var(--grad);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.link-github:hover{
+h1:hover{
     color: #fff;
 }
-.link-twitter:hover{
-    color: rgb(28, 159, 240);
-}
-.link-linkedin:hover{
-    color: rgb(0, 115, 178);
-}
-.link-hackerrank:hover{
-    color: rgb(0, 239, 100);
-}
-.link-project{
-    color: #fff;
-}
-.link-project:hover{
-    background: linear-gradient(225deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.systemizer-container{
-    max-width: 770px;
+.container-xxxl{
     width: 100%;
-    padding: 0 1em;
+    max-width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    width: 100%;
+}
+
+.project-card{
+    height: 100%;
+}
+.link-underline{
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 500;
+}
+.link-underline:hover{
+    color: #c0c0c0;
+}
+.circular-menu{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-toggle{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(115, 143, 123, 1);
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: background-color 200ms ease;
+}
+.menu-toggle:hover{
+    background-color: rgb(94, 124, 103);
+}
+.menu-content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.menu-link{
+    position: absolute;
+    pointer-events: all;
+    transition: 300ms transform ease;
+}
+.menu-link .ico{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.menu-link:hover .ico{
+    transform: scale(1.1);
+}
+.menu-link:nth-child(1){
+    transition-duration: 300ms;
+}
+.menu-link:nth-child(2){
+    transition-duration: 600ms;
+}
+.menu-link:nth-child(3){
+    transition-duration: 900ms;
+}
+.menu-link:nth-child(4){
+    transition-duration: 1100ms;
+}
+.menu-link:nth-child(5){
+    transition-duration: 1350ms;
+}
+.menu-link:nth-child(6){
+    transition-duration: 1600ms;
+}
+.menu-link:nth-child(7){
+    transition-duration: 1800ms;
+}
+.card-col{
+    perspective: 2000px;
+    transform: translate3d(0.1px, 0.1px, 0.1px);
+}
+.project-card{
+    border-radius: 30px;
+    position: relative;
+    min-height: 350px;
+    max-width: 300px;
+    color: #fff;
     margin: 0 auto;
+    display: block;
+    padding-top: 225px;
+    box-shadow: 0px 45px 22px -37px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms linear, box-shadow 200ms ease;
+    will-change: transform, filter;
+    transform-origin: center;
 }
-.systemizer-frame{
-    border-radius: 20px;
+.project-card::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 40vw;
-    min-height: 275px;
-    max-height: 400px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    background: linear-gradient(40.51deg, rgba(217, 217, 217, 0) 41.67%, rgba(231, 231, 231, 0.05) 62.62%, rgba(232, 232, 232, 0.13) 66.98%, rgba(234, 234, 234, 0.06) 70.97%, rgba(255, 255, 255, 0.1) 96.36%);;
 }
-@media screen and (max-width: 560px){
-    h1{
-        font-size: 3rem;
-    }
-    .nav-links{
-        text-align: center;
-        justify-content: center !important;
-    }
-    .link-mail{
-        flex-basis: 100%;
-    }
+.project-card:hover{
+    outline: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.25),
+                0px 45px 22px -37px rgba(0, 0, 0, 0.75);
 }
-@media screen and (min-width: 2560px){
-    .systemizer-container{
-        max-width: 1300px;
-    }
-    .systemizer-frame{
-        max-height: 650px;
-    }
+.project-card:hover::after{
+    opacity: 1;
+}
+.project-card .content{
+    overflow: hidden;
+    padding: 0 20px 4px;
+    z-index: 2;
+    position: absolute;
+}
+.card-image{
+    position: absolute;
+    width: 100%;
+    transform: scale(1.25) translateY(30px);
+    object-fit: contain;
+    top: 0;
+    left: 0;
+}
+.card-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+.project-card .bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    pointer-events: none;
+}
+.project-card.systemizer{
+    background-color: #282a37;
+}
+.project-card.githubcity{
+    background-color: #9AD0EC;
+}
+.project-card.githubcity .card-image, .project-card.myroom .card-image{
+    transform: scale(1.25) translateY(10px);
+}
+.project-card.myroom{
+    background: radial-gradient(43% 36%,#F1F564,#ED851B);
+}
+.project-card.pathfinding .card-image{
+    transform: scale(1.25) translateY(17px);
+}
+.project-card.pathfinding .card-bg{
+    transform: scale(1.25) translateY(30px);
+    object-fit: contain;
+    width: 100%;
+}
+.project-card h3{
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.project-card p{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);    
+}
+.project-card:hover{
+    color: #fff;
 }
