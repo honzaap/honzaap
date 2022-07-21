@@ -5,25 +5,21 @@ let projects = document.getElementsByClassName("project-card");
 // Hover effects
 for(let project of projects){
     project.onmousemove = (e) => {
-        let pos = [e.offsetX,e.offsetY];
+        project.classList.remove("fadeout");
 
-        let l = pos[0];
-        let t = pos[1];
-        let h = project.clientWidth;
-        let w = project.clientHeight;
+        let posX = e.offsetX;
+        let posY = e.offsetY;
+        
+        let width = project.clientWidth;
+        let height = project.clientHeight;
 
-        let px = Math.abs(Math.floor(100 / w * l)-100);
-        let py = Math.abs(Math.floor(100 / h * t)-100);
+        let rotationX = Math.min(Math.max((width / 2 - posX) / 8, -20), 20);
+        let rotationY = Math.min(Math.max((height / 2 - posY) / 8, -20), 20);
 
-        let lp = (50+(px - 50)/1.5);
-        let tp = (50+(py - 50)/1.5);
-
-        let ty = ((tp - 50)/2) * -0.5;
-        let tx = ((lp - 50)/1.5) * .5;
-
-        project.style.transform = `rotateY(${tx}deg) rotateX(${ty}deg)`;
+        project.style.transform = `rotateY(${rotationX}deg) rotateX(${rotationY}deg)`;
     }
     project.onmouseleave = (e) => {
+        project.classList.add("fadeout");
         project.style.transform = "";
     }
 }
