@@ -202,6 +202,12 @@ img{
 .project-card.githubcity .card-image, .project-card.myroom .card-image{
     transform: scale(1.25) translateY(10px);
 }
+.project-card.solarsystem{
+    background-color: #05051A;
+}
+.project-card.solarsystem .card-image, .project-card.myroom .card-image{
+    transform: scale(1.25);
+}
 .project-card.myroom{
     background: radial-gradient(43% 36%,#F1F564,#ED851B);
 }
