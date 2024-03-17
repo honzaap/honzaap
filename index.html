@@ -11,118 +11,78 @@
     </script>
 
     <title>Jan Pánek</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
     
     <!-- Primary Meta Tags -->
     <title>Jan Pánek</title>
     <meta name="title" content="Jan Pánek">
-    <meta name="description" content="Jan Pánek – programátor a webový vývojář.">
+    <meta name="description" content="Jan Pánek – Web Developer.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jan-panek.cz/">
     <meta property="og:title" content="Jan Pánek">
-    <meta property="og:description" content="Jan Pánek – programátor a webový vývojář.">
+    <meta property="og:description" content="Jan Pánek – Web Developer.">
     <meta property="og:image" content="https://jan-panek.cz/ogimage.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jan-panek.cz/">
     <meta property="twitter:title" content="Jan Pánek">
-    <meta property="twitter:description" content="Jan Pánek – programátor a webový vývojář.">
+    <meta property="twitter:description" content="Jan Pánek – Web Developer.">
     <meta property="twitter:image" content="https://jan-panek.cz/ogimage.png">
 
     <link rel="icon" href="./favicon.ico">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loadScreen">
+        <div class="loader" id="loader">
+        </div>
+        <span class="loader-inner"></span>
+    </div>
+
+    <!-- Main Screen -->
     <section class="container">
-        <!-- Background patterns layer -->
-        <div class="layer-background">
-            <div class="pattern-bottom">
-                <div class="mask"></div>
-            </div>
+        <div id="tear" class="tear"></div>
 
-            <img class="noise" src="./assets/noise.webp" alt="Noise">
-
-            <img class="pattern-corner" src="./assets/corner_pattern.svg" alt="Corner pattern">
-            <img class="pattern-corner right" src="./assets/corner_pattern.svg" alt="Corner pattern">
-        </div>
-
-        <!-- Background clouds layer -->
-        <div class="layer-clouds-background">
-            <img class="cloud-alt cloud-alt-1" src="./assets/cloud_alt.svg" alt="Cloud">
-            <img class="cloud-alt cloud-alt-2" src="./assets/cloud_alt2.svg" alt="Cloud">
-            <img class="cloud-alt cloud-alt-3" src="./assets/cloud_alt3.svg" alt="Cloud">
-        </div>
-
-        <!-- Lanterns layer -->
-        <div class="layer-lanterns">
-            <img class="lantern lantern-1" src="./assets/lantern_long.svg" alt="Lantern">
-            <img class="lantern lantern-2" src="./assets/lantern_silver.svg" alt="Lantern">
-            <img class="lantern lantern-3" src="./assets/lantern.svg" alt="Lantern">
-        </div>
-
-        <!-- Lower clouds layer -->
-        <div class="layer-clouds-lower">
-            <img class="cloud cloud-1" src="./assets/cloud2.svg" alt="Cloud">
-        </div>
-
-        <!-- Sun layer -->
-        <div class="layer-sun">
-            <div class="sun"></div>
-        </div>
-
-        <!-- Upper clouds layer -->
-        <div class="layer-clouds-upper">
-            <img class="cloud cloud-1" src="./assets/cloud.svg" alt="Cloud">
-            <img class="cloud cloud-2" src="./assets/cloud3.svg" alt="Cloud">
-        </div>
-
-        <!-- Content layer -->
-        <main class="layer-content">
-            <!-- Social links and name container -->
-            <div class="social-container">
-                <div class="social-top">
-                    <hr class="line" />
-                    <a target="_blank" href="https://github.com/honzaap" class="ico"><img src="./assets/social/github.svg" alt="github"></a>
-                    <hr class="line" />
-                </div>
-                <div class="social-bottom">
-                    <div class="social-side">
-                        <a target="_blank" href="https://twitter.com/honzaap1" class="ico"><img src="./assets/social/twitter.svg" alt="twitter"></a>
-                        <a target="_blank" href="https://pinterest.com/honzaaap/" class="ico"><img src="./assets/social/pinterest.svg" alt="pinterest"></a>
-                        <a target="_blank" href="https://myanimelist.net/profile/honzaap" class="ico"><img src="./assets/social/mal.svg" alt="mal"></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/jan-p%C3%A1nek-a6887b20b/" class="ico"><img src="./assets/social/linkedin.svg" alt="linkedin"></a>
-                    </div>
-                    <div class="social-name">
-                        <div class="name-container">
-                            <div class="img-container">
-                                <img style="transform: translateY(100%);" src="./assets/hanafuda.webp" alt="Hanafuda background">
-                            </div>
-                            <h1>J<br/>a<br/>n<br/>P<br/>á<br/>n<br/>e<br/>k</h1>
-                        </div>
-                    </div>
-                    <div class="social-side">
-                        <a target="_blank" href="mailto:paneja2@seznam.cz" class="ico"><img src="./assets/social/email.svg" alt="email"></a>
-                        <a target="_blank" href="https://www.hackerrank.com/honzaap" class="ico"><img src="./assets/social/hackerrank.svg" alt="hackerrank"></a>
-                        <a target="_blank" href="https://app.codesignal.com/profile/honzaap" class="ico"><img src="./assets/social/codesignal.svg" alt="codesignal"></a>
-                        <a target="_blank" href="https://codepen.io/honzaap" class="ico"><img src="./assets/social/codepen.svg" alt="codepen"></a>
-                    </div>
+        <div class="avatar-container">
+            <div class="avatar">
+                <img class="pepe" src="/assets/pepe.png" alt="Pepe">
+                <div class="halftone">
+                    <img src="/assets/shapes/halftone.svg" alt="Halftone">
                 </div>
             </div>
 
-            <!-- Bottom text -->
-            <div class="bottom-text">
-                <span class="dot"></span>
-                <hr class="line">
-                <p>Web</p>
-                <hr class="line mid">
-                <p>Developer</p>
-                <hr class="line">
-                <span class="dot"></span>
+            <div class="dialog dialog-1">
+                <img src="/assets/shapes/dialog1.svg" alt="Dialog Window">
+                <span>
+                    <span>J</span>an 
+                    <span>P</span>ánek
+                </span>
             </div>
-        </main>
+            <div class="dialog dialog-2">
+                <img src="/assets/shapes/dialog2.svg" alt="Dialog Window">
+                <span>Web Developer</span>
+            </div>
+            <div class="dialog dialog-3">
+                <img src="/assets/shapes/dialog3.svg" alt="Dialog Window">
+                <div class="gh">
+                    <img src="/assets/social/github_bg.svg" alt="GitHub Logo">
+                </div>
+                <a>
+                    <img src="/assets/shapes/arrow.svg" alt="Arrow">
+                    GitHub
+                </a>
+            </div>
+        </div>
     </section>
 
+    <div class="noise"></div>
     <script type="module" src="./main.js"></script>
 </body>
 </html>
