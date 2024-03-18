@@ -77,7 +77,7 @@ body {
 }
 
 .noise {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -92,6 +92,22 @@ body {
     position: relative;
     min-width: 100vw;
     min-height: 100vh;
+
+    &::before {
+        content: "";
+    display: block;
+    position: fixed;
+    bottom: -40%;
+    left: -4%;
+    width: 30vw;
+    aspect-ratio: 1 / 2;
+    background-image: url(/assets/shapes/halftone.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(0, 50%) rotateZ(-45deg);
+    transform-origin: 15%;
+    opacity: 0.125;
+    }
 }
 
 
@@ -99,22 +115,6 @@ body {
     syntax: "<percentage>";
     inherits: false;
     initial-value: 0%;
-}
-
-.tear {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("/assets/shapes/tear.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    mask-image: linear-gradient(135deg, #fff 0%, #fff var(--tear-progress), #ffffff00 var(--tear-progress));
-
-    &.active {
-        animation: tear-transition 500ms linear forwards;
-    }
 }
 
 @keyframes tear-transition {
@@ -218,6 +218,8 @@ body {
             left: 33px;
             top: 12px;
             transform: rotateZ(4deg);
+            color: inherit;
+            text-decoration: none;
         
             img {
                 padding-bottom: 5px;
@@ -237,6 +239,198 @@ body {
                 transform: rotateZ(5deg);
                 opacity: 0.2;
             }
+        }
+    }
+}
+
+.tear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 900px;
+    width: 100%;
+    background-image: url("/assets/shapes/tear.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    mask-image: linear-gradient(135deg, #fff 0%, #fff var(--tear-progress), #ffffff00 var(--tear-progress));
+
+    &.active {
+        animation: tear-transition 500ms linear forwards;
+    }
+
+    > a {
+        position: absolute;
+        display: flex;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        transform: rotateZ(45deg);
+        overflow: hidden;
+        box-shadow: 0 0 0 3px black;
+
+        img {
+            display: block;
+            width: 44px;
+            height: 44px;
+            transform: rotateZ(-45deg);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-color: #fff;
+            display: flex;
+            width: 55px;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000;
+            z-index: -1;
+            transition: transform 400ms ease;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 90%;
+            aspect-ratio: 1 / 2;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%) rotateZ(-45deg);
+            z-index: -2;
+            background-image: url("/assets/shapes/halftone.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &:hover {
+            &::before {
+                transform: rotateZ(180deg) scale(3);
+            }
+        }
+    }
+
+    .gh {
+        top: calc(20.5vh + 20.5vw);
+        left: calc(20.5vw + 20.5vh);
+        transform: rotateZ(44deg);
+        
+        &::before {
+            background-color: #6F71A3;
+            transform: rotateZ(-6deg);
+        }
+
+        img {
+            transform: rotateZ(-44deg);
+        }
+    }
+
+    .li {
+        left: calc(22vw + 22vh);
+        top: calc(24vh + 24vw);
+        transform: rotateZ(48deg);
+        
+        &::before {
+            background-color: #617FCC;
+        }
+
+        img {
+            transform: rotateZ(-48deg);
+        }
+    }
+
+    .mail {
+        left: calc(25vw + 25vh);
+        top: calc(21.75vh + 21.75vw);
+        transform: rotateZ(44deg);
+        
+        &::before {
+            background-color: #C7B178;
+            transform: rotateZ(-2deg);
+        }
+
+        img {
+            transform: rotateZ(-44deg);
+        }
+    }
+
+    .tw {
+        left: calc(25.5vw + 25.5vh);
+        top: calc(26vh + 26vw);
+        transform: rotateZ(41deg);
+        
+        &::before {
+            background-color: #7DB1BC;
+            transform: rotateZ(5deg);
+        }
+
+        img {
+            transform: rotateZ(-41deg);
+        }
+    }
+
+    .cs {
+        left: calc(29vw + 29vh);
+        top: calc(24vh + 24vw);
+        transform: rotateZ(41deg);
+        
+        &::before {
+            background-color: #6774E9;
+            transform: rotateZ(5deg);
+        }
+
+        img {
+            transform: rotateZ(-41deg);
+        }
+    }
+
+    .hr {
+        left: calc(28.5vw + 28.5vh);
+        top: calc(28.5vh + 28.5vw);
+        transform: rotateZ(44deg);
+        
+        &::before {
+            background-color: #78BB9B;
+            transform: rotateZ(2deg);
+        }
+
+        img {
+            transform: rotateZ(-44deg);
+        }
+    }
+
+    .pi {
+        left: calc(31.5vw + 31.5vh);
+        top: calc(26.5vh + 26.5vw);
+        transform: rotateZ(44deg);
+        
+        &::before {
+            background-color: #B87474;
+            transform: rotateZ(-1deg);
+        }
+
+        img {
+            transform: rotateZ(-46deg);
+        }
+    }
+
+    .mal {
+        left: calc(32.5vw + 32.5vh);
+        top: calc(30vh + 30vw);
+        transform: rotateZ(44deg);
+        
+        &::before {
+            background-color: #7686DA;
+            transform: rotateZ(-10deg);
+        }
+
+        img {
+            transform: rotateZ(-44deg);
         }
     }
 }
