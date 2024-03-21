@@ -4,6 +4,7 @@ const loader = document.getElementById("loader");
 const loadScreen = document.getElementById("loadScreen");
 
 const tear = document.getElementById("tear");
+const avatarContainer = document.getElementById("avatarContainer");
 
 let loaded = false;
 
@@ -16,6 +17,18 @@ function finishLoader() {
 
 function showMainScreen() {
     tear.classList.add("active");
+    setTimeout(() => {
+        let i = 0;
+        tear.querySelectorAll("a").forEach(link => {
+            setTimeout(() => {
+                link.classList.add("active");
+            }, i * 100);
+            i++;
+        });
+    }, 500);
+    setTimeout(() => {
+        avatarContainer.classList.add("active");
+    }, 1000);
 }
 
 function startLoader() {
