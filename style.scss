@@ -109,6 +109,65 @@ body {
         opacity: 0.025;
         filter: invert(1);
     }
+
+    @media (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: max(calc(210px - 25vh), 140px);
+
+        &::before {
+            display: none;
+        }
+
+        .avatar-container {
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: none;
+        }
+
+        .tear {
+            position: unset;
+            display: flex;
+            min-height: unset;
+            background-image: none;
+            max-width: 500px;
+            height: unset;
+            padding: 20px;
+            margin-top: 100px;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+
+            > a {
+                position: unset;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-top: max(calc(190px - 13vw - 12vh), 140px);
+
+        .avatar-container {
+            .dialog-2 {
+                display: none;
+            }
+
+            .dialog-3 {
+                display: none;
+            }
+        }
+
+        .tear {
+            margin-top: 70px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        padding-top: 150px;
+    }
 }
 
 
