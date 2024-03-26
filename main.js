@@ -17,6 +17,7 @@ function finishLoader() {
 
 function showMainScreen() {
     tear.classList.add("active");
+    tear.style.display = "";
     setTimeout(() => {
         let i = 0;
         tear.querySelectorAll("a").forEach(link => {
@@ -28,6 +29,7 @@ function showMainScreen() {
     }, 500);
     setTimeout(() => {
         avatarContainer.classList.add("active");
+        avatarContainer.style.display = "";
     }, 1000);
 }
 

@@ -91,7 +91,7 @@ body {
 .container {
     position: relative;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: max(100vh, calc(300px + 34vw));
 
     &::before {
         content: "";
@@ -188,7 +188,7 @@ body {
 
 .avatar-container {
     position: absolute;
-    top: 50%;
+    top: max(50vh, 190px);
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -418,6 +418,7 @@ body {
     background-position: bottom left;
     mask-image: linear-gradient(135deg, #fff 0%, #fff var(--tear-progress), #ffffff00 var(--tear-progress));
     pointer-events: none;
+    box-sizing: border-box;
 
     &.active {
         animation: tear-transition 500ms linear forwards;
