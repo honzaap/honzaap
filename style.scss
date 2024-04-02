@@ -1,3 +1,11 @@
+@mixin no-drag() {
+    -webkit-user-drag: none;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 * {
     padding: 0; 
     margin: 0;
@@ -86,6 +94,7 @@ body {
     background-repeat: repeat;
     pointer-events: none;
     opacity: 0.03;
+    @include no-drag;
 }
 
 .container {
@@ -110,7 +119,7 @@ body {
         filter: invert(1);
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1200px), (max-width: 135vh) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -126,6 +135,7 @@ body {
             top: unset;
             left: unset;
             transform: none;
+            @include no-drag;
         }
 
         .tear {
@@ -140,6 +150,7 @@ body {
             justify-content: center;
             gap: 50px;
             flex-wrap: wrap;
+            @include no-drag;
 
             > a {
                 position: unset;
@@ -200,6 +211,7 @@ body {
             width: 120px;
             object-fit: contain;
             filter: drop-shadow(-6px -4px 0 #000);
+            @include no-drag;
         }
 
         .mask {
@@ -218,6 +230,7 @@ body {
             left: 0;
             top: 0;
             opacity: 0.2;
+            @include no-drag;
 
             img {
                 transform: rotateZ(-45deg);
@@ -230,6 +243,7 @@ body {
         position: absolute;
         opacity: 0;
         transform-origin: bottom left;
+        @include no-drag;
 
         > span, a {
             position: absolute;
@@ -447,6 +461,7 @@ body {
             width: 44px;
             height: 44px;
             transform: rotateZ(-45deg);
+            @include no-drag;
         }
 
         &.active {
@@ -483,6 +498,21 @@ body {
             background-size: contain;
         }
 
+        @media (min-width: 2000px) {
+            width: 4vw;
+            height: 4vw;
+
+            &::before {
+                width: 3.2vw;
+                height: 3.2vw;
+            }
+
+            img {
+                width: 3vw;
+                height: 3vw;
+            }
+        }
+
         &:hover {
             &::before {
                 transform: rotateZ(180deg) scale(3);
@@ -491,7 +521,7 @@ body {
     }
 
     .gh {
-        top: calc(20.5vh + 20.5vw);
+        top: max(calc(20.5vh + 20.5vw), 500px);
         left: calc(20.5vw + 20.5vh);
         transform: rotateZ(44deg);
         
@@ -507,7 +537,7 @@ body {
 
     .li {
         left: calc(22vw + 22vh);
-        top: calc(24vh + 24vw);
+        top: max(calc(24vh + 24vw), 600px);
         transform: rotateZ(48deg);
         
         &::before {
@@ -521,7 +551,7 @@ body {
 
     .mail {
         left: calc(25vw + 25vh);
-        top: calc(21.75vh + 21.75vw);
+        top: max(calc(21.75vh + 21.75vw), 540px);
         transform: rotateZ(44deg);
         
         &::before {
@@ -536,7 +566,7 @@ body {
 
     .tw {
         left: calc(25.5vw + 25.5vh);
-        top: calc(26vh + 26vw);
+        top: max(calc(26vh + 26vw), 660px);
         transform: rotateZ(41deg);
         
         &::before {
@@ -551,7 +581,7 @@ body {
 
     .cs {
         left: calc(29vw + 29vh);
-        top: calc(24vh + 24vw);
+        top: max(calc(24vh + 24vw), 600px);
         transform: rotateZ(41deg);
         
         &::before {
@@ -566,7 +596,7 @@ body {
 
     .hr {
         left: calc(28.5vw + 28.5vh);
-        top: calc(28.5vh + 28.5vw);
+        top: max(calc(28.5vh + 28.5vw), 720px);
         transform: rotateZ(44deg);
         
         &::before {
@@ -581,7 +611,7 @@ body {
 
     .pi {
         left: calc(31.5vw + 31.5vh);
-        top: calc(26.5vh + 26.5vw);
+        top: max(calc(26.5vh + 26.5vw), 665px);
         transform: rotateZ(44deg);
         
         &::before {
@@ -596,7 +626,7 @@ body {
 
     .mal {
         left: calc(32.5vw + 32.5vh);
-        top: calc(30vh + 30vw);
+        top: max(calc(30vh + 30vw), 760px);
         transform: rotateZ(44deg);
         
         &::before {

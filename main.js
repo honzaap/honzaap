@@ -41,14 +41,16 @@ function startLoader() {
             progress += Math.min((100 - progress) / 2, 10);
             loader.style.clipPath = `polygon(0 ${100 - progress}%, 100% ${100 - progress}%, 100% 100%, 0 100%)`;
             progressLoader();
-        }, 250);
+        }, 10);
     }
     progressLoader();
 }
 
-// On load event
-setTimeout(() => {
-    finishLoader();
-}, 300);
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        finishLoader();
+    }, 1500);
+})
+
 
 startLoader();
