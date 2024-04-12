@@ -181,7 +181,6 @@ body {
     }
 }
 
-
 @property --tear-progress {
     syntax: "<percentage>";
     inherits: false;
@@ -191,9 +190,11 @@ body {
 @keyframes tear-transition {
     0% {
         --tear-progress: 0%;
+        opacity: 0;
     }
     100% {
         --tear-progress: 100%;
+        opacity: 1;
     }
 }
 
@@ -431,8 +432,13 @@ body {
     background-size: contain;
     background-position: bottom left;
     mask-image: linear-gradient(135deg, #fff 0%, #fff var(--tear-progress), #ffffff00 var(--tear-progress));
+    -moz-mask-image: none !important;
     pointer-events: none;
     box-sizing: border-box;
+
+    @media (min-width: 2560px) {
+        min-height: 50vw;
+    }
 
     &.active {
         animation: tear-transition 500ms linear forwards;
