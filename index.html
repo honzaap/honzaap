@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
     <!-- Primary Meta Tags -->
     <title>Jan Pánek</title>
@@ -27,89 +27,42 @@
     <meta property="og:url" content="https://jan-panek.cz/">
     <meta property="og:title" content="Jan Pánek">
     <meta property="og:description" content="Jan Pánek – Web Developer.">
-    <meta property="og:image" content="https://jan-panek.cz/ogimage.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jan-panek.cz/">
     <meta property="twitter:title" content="Jan Pánek">
     <meta property="twitter:description" content="Jan Pánek – Web Developer.">
-    <meta property="twitter:image" content="https://jan-panek.cz/ogimage.png">
 
     <link rel="icon" href="./favicon.ico">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loadScreen">
-        <div class="loader" id="loader">
-        </div>
-        <span class="loader-inner"></span>
-    </div>
-
-    <!-- Main Screen -->
-    <section class="container">
-        <div class="avatar-container" id="avatarContainer" style="display: none;">
-            <div class="avatar" id="avatar">
-                <img class="pepe" src="/assets/pepe.png" alt="Pepe">
-                <div class="mask">
-                    <div class="halftone">
-                        <img src="/assets/shapes/halftone.svg" alt="Halftone">
-                    </div>
-                </div>
-            </div>
-
-            <div class="dialog dialog-1">
-                <img src="/assets/shapes/dialog1.svg" alt="Dialog Window">
-                <span>
-                    <span>J</span>an 
-                    <span>P</span>ánek
-                </span>
-            </div>
-            <div class="dialog dialog-2">
-                <img src="/assets/shapes/dialog2.svg" alt="Dialog Window">
-                <span>Web Developer</span>
-            </div>
-            <div class="dialog dialog-3">
+    <div class="container">
+        <h1>Jan Pánek</h1>
+        <div class="links">
+            <div class="row">
                 <a href="https://github.com/honzaap" target="_blank">
-                    <img src="/assets/shapes/arrow.svg" alt="Arrow">
-                    GitHub
+                    <img src="/assets/social/github.svg" alt="Github">
                 </a>
-                <img src="/assets/shapes/dialog3.svg" alt="Dialog Window">
-                <div class="gh">
-                    <img src="/assets/social/github_bg.svg" alt="GitHub Logo">
-                </div>
             </div>
-
+            <div class="row">
+                <a href="https://www.linkedin.com/in/honzaap/" target="_blank">
+                    <img src="/assets/social/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="mailto:paneja2@seznam.cz" target="_blank">
+                    <img src="/assets/social/email.svg" alt="Email">
+                </a>
+            </div>
+            <div class="row">
+                <a href="https://pinterest.com/honzaaap" target="_blank">
+                    <img src="/assets/social/pinterest.svg" alt="Pinterest">
+                </a>
+                <a href="https://myanimelist.net/profile/honzaap" target="_blank">
+                    <img src="/assets/social/mal.svg" alt="MyAnimeList">
+                </a>
+            </div>
         </div>
-        <div id="tear" class="tear" style="display: none;">
-            <a class="gh" href="https://github.com/honzaap" target="_blank">
-                <img src="/assets/social/github.svg" alt="GitHub">
-            </a>
-            <a class="li" href="https://www.linkedin.com/in/jan-p%C3%A1nek-a6887b20b" target="_blank">
-                <img src="/assets/social/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a class="mail" href="mailto:paneja2@seznam.cz" target="_blank">
-                <img src="/assets/social/email.svg" alt="Email">
-            </a>
-            <a class="tw" href="https://twitter.com/honzaap1" target="_blank">
-                <img src="/assets/social/twitter.svg" alt="Twitter">
-            </a>
-            <a class="cs" href="https://app.codesignal.com/profile/honzaap" target="_blank">
-                <img src="/assets/social/codesignal.svg" alt="CodeSignal">
-            </a>
-            <a class="hr" href="https://www.hackerrank.com/honzaap" target="_blank">
-                <img src="/assets/social/hackerrank.svg" alt="HackerRank">
-            </a>
-            <a class="pi" href="https://pinterest.com/honzaaap" target="_blank">
-                <img src="/assets/social/pinterest.svg" alt="Pinterest">
-            </a>
-            <a class="mal" href="https://myanimelist.net/profile/honzaap" target="_blank">
-                <img src="/assets/social/mal.svg" alt="MyAnimeList">
-            </a>
-        </div>
-    </section>
-
-    <div class="noise"></div>
+    </div>
     <script type="module" src="./main.js"></script>
 </body>
 </html>
