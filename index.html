@@ -1,68 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GA script -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CRS19TYTQ"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-8CRS19TYTQ');
-    </script>
+        <!-- GA script -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CRS19TYTQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-8CRS19TYTQ");
+        </script>
 
-    <title>Jan Pánek</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Primary Meta Tags -->
-    <title>Jan Pánek</title>
-    <meta name="title" content="Jan Pánek">
-    <meta name="description" content="Jan Pánek – Web Developer.">
+        <!-- Primary Meta Tags -->
+        <title>Jan Pánek</title>
+        <meta name="title" content="Jan Pánek" />
+        <meta name="description" content="Jan Pánek – Software Engineer." />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jan-panek.cz/">
-    <meta property="og:title" content="Jan Pánek">
-    <meta property="og:description" content="Jan Pánek – Web Developer.">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jan-panek.cz/" />
+        <meta property="og:title" content="Jan Pánek" />
+        <meta property="og:description" content="Jan Pánek – Software Engineer." />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jan-panek.cz/">
-    <meta property="twitter:title" content="Jan Pánek">
-    <meta property="twitter:description" content="Jan Pánek – Web Developer.">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://jan-panek.cz/" />
+        <meta property="twitter:title" content="Jan Pánek" />
+        <meta property="twitter:description" content="Jan Pánek – Software Engineer." />
 
-    <link rel="icon" href="./favicon.ico">
-</head>
-<body>
-    <div class="container">
-        <h1>Jan Pánek</h1>
-        <div class="links">
-            <div class="row">
-                <a href="https://github.com/honzaap" target="_blank">
-                    <img src="/assets/social/github.svg" alt="Github">
-                </a>
-            </div>
-            <div class="row">
-                <a href="https://www.linkedin.com/in/honzaap/" target="_blank">
-                    <img src="/assets/social/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a href="mailto:paneja2@seznam.cz" target="_blank">
-                    <img src="/assets/social/email.svg" alt="Email">
-                </a>
-            </div>
-            <div class="row">
-                <a href="https://pinterest.com/honzaaap" target="_blank">
-                    <img src="/assets/social/pinterest.svg" alt="Pinterest">
-                </a>
-                <a href="https://myanimelist.net/profile/honzaap" target="_blank">
-                    <img src="/assets/social/mal.svg" alt="MyAnimeList">
-                </a>
+        <link rel="icon" href="./favicon.ico" />
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                min-height: 100vh;
+                background-color: #f5e9d9;
+                color: #131313;
+            }
+
+            a {
+                color: #131313;
+                text-decoration: none;
+            }
+
+            h1 {
+                font-family: "Montserrat";
+                font-size: min(92px, 15vw);
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+
+            .container {
+                padding-top: 28vh;
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 18px;
+                margin-top: 48px;
+            }
+
+            .row {
+                display: flex;
+                gap: 18px;
+            }
+
+            .links img {
+                width: 48px;
+                height: 48px;
+            }
+
+            a:hover img {
+                transform: scale(1.075);
+            }
+
+            .btn {
+                position: fixed;
+                bottom: 18px;
+                right: 18px;
+                color: #131313;
+                font-family: "Montserrat";
+                font-weight: 400;
+                font-size: 10.5px;
+                letter-spacing: 1.1px;
+                text-transform: uppercase;
+                border-radius: 4px;
+            }
+
+            .btn:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Jan Pánek</h1>
+            <div class="links">
+                <div class="row">
+                    <a href="https://github.com/honzaap" target="_blank">
+                        <img src="/assets/social/github.svg" alt="Github" />
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/honzaap/" target="_blank">
+                        <img src="/assets/social/linkedin.svg" alt="LinkedIn" />
+                    </a>
+                    <a href="mailto:paneja2@seznam.cz" target="_blank">
+                        <img src="/assets/social/email.svg" alt="Email" />
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="https://pinterest.com/honzaaap" target="_blank">
+                        <img src="/assets/social/pinterest.svg" alt="Pinterest" />
+                    </a>
+                    <a href="https://myanimelist.net/profile/honzaap" target="_blank">
+                        <img src="/assets/social/mal.svg" alt="MyAnimeList" />
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <script type="module" src="./main.js"></script>
-</body>
+
+        <a class="btn" href="https://jan-panek.cz/portfolio"> Portfolio </a>
+    </body>
 </html>

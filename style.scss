@@ -1,61 +1,808 @@
-* {
-    padding: 0; 
-    margin: 0;
+// ---------------------------------------------------------------------------
+// Tokens
+// ---------------------------------------------------------------------------
+
+$bg: #f5e9d9;
+$bg-alt: #efe0cc;
+$ink: #131313;
+$ink-soft: #4a4136;
+$ink-mute: #786b58;
+$rule: rgba(19, 19, 19, 0.14);
+$rule-soft: rgba(19, 19, 19, 0.08);
+$accent: #b54a2a;
+$card: #fbf3e6;
+
+$max: 1100px;
+
+$serif:
+    "Inter",
+    "Helvetica Neue",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+$mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+// ---------------------------------------------------------------------------
+// Reset
+// ---------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-// Colors
-$background: #F5E9D9;
-$main: #131313;
-$secondary: #64181B;
+* {
+    margin: 0;
+    padding: 0;
+}
 
-body {
-    min-height: 100vh;
-    background-color: $background;
-    color: $main;
+html {
+    scroll-behavior: smooth;
+}
+
+body.portfolio {
+    background: $bg;
+    color: $ink;
+    font-family: $serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    @media (min-width: 800px) {
+        font-size: 17px;
+    }
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
 }
 
 a {
-    color: $main;
-    text-decoration: none;
+    color: $ink;
+    text-decoration: underline;
+    text-decoration-color: $rule;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition:
+        text-decoration-color 0.15s ease,
+        color 0.15s ease;
 
     &:hover {
-        color: $secondary;
+        text-decoration-color: $accent;
+        color: $accent;
     }
 }
 
-h1 {
-    font-family: "Montserrat";
-    font-size: min(92px, 15vw);
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    display: block;
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: $ink;
 }
+
+// ---------------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------------
 
 .container {
-    padding-top: 28vh;
+    width: 100%;
+    max-width: $max;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media (min-width: 800px) {
+        padding: 0 40px;
+    }
 }
 
-.links {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 48px;
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    background: $ink;
+    color: $bg;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 100;
 
-    .row {
+    &:focus {
+        top: 12px;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Hero
+// ---------------------------------------------------------------------------
+
+.hero {
+    padding: 64px 0 56px;
+    border-bottom: 1px solid $rule;
+
+    @media (min-width: 800px) {
+        padding: 96px 0 72px;
+    }
+
+    &__meta {
         display: flex;
-        gap: 18px;
+        align-items: center;
+        gap: 16px;
+        font-family: $mono;
+        font-size: 13px;
+        color: $ink-mute;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
     }
 
-    img {
-        width: 48px;
-        height: 48px;
+    &__location {
+        margin-top: 16px;
+        font-family: $mono;
+        font-size: 13px;
+        color: $ink-mute;
     }
 
-    a:hover {
-        img {
-            transform: scale(1.075);
+    &__name {
+        font-size: clamp(40px, 7vw, 64px);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+    }
+
+    &__role {
+        font-size: clamp(18px, 2.2vw, 22px);
+        color: $ink-soft;
+        max-width: 720px;
+        margin-bottom: 28px;
+        font-weight: 500;
+    }
+
+    &__intro {
+        max-width: 720px;
+        color: $ink-soft;
+        margin-bottom: 32px;
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 36px;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        font-family: $mono;
+        font-size: 13.5px;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: $ink-soft;
+            text-decoration: none;
+
+            img {
+                width: 16px;
+                height: 16px;
+                opacity: 0.6;
+                transition: opacity 0.15s ease;
+            }
+
+            &:hover {
+                color: $accent;
+                text-decoration: underline;
+
+                img {
+                    opacity: 1;
+                }
+            }
         }
     }
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: $ink;
+    color: $bg;
+    font-family: $mono;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+// ---------------------------------------------------------------------------
+// Buttons
+// ---------------------------------------------------------------------------
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid $rule;
+    border-radius: 4px;
+    background: transparent;
+    color: $ink;
+    font-family: $mono;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    line-height: 1;
+
+    &:hover {
+        border-color: $ink;
+        color: $ink;
+        background: $card;
+    }
+
+    &--primary {
+        background: $ink;
+        color: $bg;
+        border-color: $ink;
+
+        &:hover {
+            background: $accent;
+            border-color: $accent;
+            color: $bg;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Section scaffolding
+// ---------------------------------------------------------------------------
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid $rule;
+
+    @media (min-width: 800px) {
+        padding: 112px 0;
+    }
+
+    &--compact {
+        padding: 64px 0;
+
+        @media (min-width: 800px) {
+            padding: 80px 0;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        margin-bottom: 48px;
+        flex-wrap: wrap;
+    }
+
+    &__index {
+        font-family: $mono;
+        font-size: 12px;
+        color: $ink-mute;
+        letter-spacing: 0.1em;
+    }
+
+    &__title {
+        font-size: clamp(28px, 4vw, 36px);
+        font-weight: 700;
+    }
+
+    &__note {
+        flex-basis: 100%;
+        color: $ink-soft;
+        font-size: 15px;
+        margin-top: -8px;
+        max-width: 600px;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Case study
+// ---------------------------------------------------------------------------
+
+.case {
+    padding: 40px 0 56px;
+    border-top: 1px solid $rule-soft;
+
+    &:first-of-type {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    @media (min-width: 800px) {
+        padding: 56px 0 72px;
+    }
+
+    &__head {
+        margin-bottom: 32px;
+    }
+
+    &__title-row {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        font-size: clamp(26px, 3.5vw, 34px);
+        font-weight: 700;
+        letter-spacing: -0.015em;
+    }
+
+    &__summary {
+        font-size: 17px;
+        color: $ink-soft;
+        max-width: 760px;
+        margin-bottom: 24px;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 32px;
+        padding: 16px 0;
+        border-top: 1px solid $rule-soft;
+        border-bottom: 1px solid $rule-soft;
+        font-size: 14px;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        span {
+            font-family: $mono;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $ink-mute;
+        }
+
+        b {
+            font-weight: 500;
+            color: $ink;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px 40px;
+
+        @media (min-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 56px;
+        }
+    }
+
+    &__block {
+        h4 {
+            font-family: $mono;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $ink-mute;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: $ink-soft;
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &--wide {
+            @media (min-width: 800px) {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+}
+
+.case__link {
+    font-family: $mono;
+    font-size: 13px;
+    color: $ink-mute;
+    margin-bottom: 8px;
+    display: block;
+
+    &:hover {
+        color: $accent;
+    }
+
+    &--muted {
+        text-decoration: none;
+        cursor: default;
+
+        &:hover {
+            color: $ink-mute;
+        }
+    }
+}
+
+.case__date {
+    font-weight: 500;
+    font-size: 14px;
+    color: $ink-mute;
+}
+
+// ---------------------------------------------------------------------------
+// Lists / chips / decisions
+// ---------------------------------------------------------------------------
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: $ink-soft;
+
+    li {
+        position: relative;
+        padding-left: 18px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.65em;
+            width: 6px;
+            height: 1px;
+            background: $ink-mute;
+        }
+
+        b {
+            color: $ink;
+            font-weight: 600;
+        }
+    }
+
+    &--inline {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        font-family: $mono;
+        font-size: 13px;
+        margin-top: 12px;
+
+        li {
+            padding-left: 12px;
+            color: $ink-mute;
+
+            &::before {
+                width: 4px;
+                top: 0.7em;
+            }
+        }
+    }
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+
+    li {
+        padding: 6px 12px;
+        background: $card;
+        border: 1px solid $rule-soft;
+        border-radius: 999px;
+        font-size: 13.5px;
+        color: $ink-soft;
+        font-family: $mono;
+
+        a {
+            text-decoration: none;
+            color: $ink;
+        }
+
+        a:hover {
+            color: $accent;
+        }
+    }
+
+    &__more {
+        font-size: 12px;
+        color: $ink-mute;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.decisions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 32px;
+
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    > div {
+        padding: 16px 0 0;
+        border-top: 1px solid $rule-soft;
+    }
+
+    dt {
+        font-family: $serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: $ink;
+        margin-bottom: 6px;
+    }
+
+    dd {
+        color: $ink-soft;
+        font-size: 14.5px;
+        line-height: 1.55;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Open source projects
+// ---------------------------------------------------------------------------
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: $rule;
+    border: 1px solid $rule;
+    border-radius: 6px;
+    overflow: hidden;
+
+    @media (min-width: 720px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.project {
+    display: block;
+    background: $bg;
+    padding: 24px 28px;
+    color: $ink;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+    height: 100%;
+
+    &:hover {
+        background: $card;
+        color: $ink;
+
+        .project__title {
+            color: $accent;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        transition: color 0.15s ease;
+    }
+
+    &__stars {
+        font-family: $mono;
+        font-size: 12.5px;
+        color: $ink-mute;
+        white-space: nowrap;
+    }
+
+    &__desc {
+        color: $ink-soft;
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 10px;
+        font-family: $mono;
+        font-size: 12px;
+        color: $ink-mute;
+
+        li {
+            &::after {
+                content: "·";
+                margin-left: 10px;
+                color: $rule;
+            }
+
+            &:last-child::after {
+                content: none;
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Stack
+// ---------------------------------------------------------------------------
+
+.stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px 48px;
+
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__group {
+        h4 {
+            font-family: $mono;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $ink-mute;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $rule-soft;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            li {
+                font-size: 15px;
+                color: $ink-soft;
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Education
+// ---------------------------------------------------------------------------
+
+.education {
+    display: flex;
+    flex-direction: column;
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px 32px;
+        padding: 20px 0;
+        border-top: 1px solid $rule-soft;
+
+        &:last-child {
+            border-bottom: 1px solid $rule-soft;
+        }
+
+        @media (min-width: 600px) {
+            grid-template-columns: 180px 1fr;
+            align-items: baseline;
+        }
+    }
+
+    &__when {
+        font-family: $mono;
+        font-size: 13px;
+        color: $ink-mute;
+    }
+
+    &__what {
+        h4 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        p {
+            color: $ink-soft;
+            font-size: 15px;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------------
+
+.footer {
+    padding: 56px 0 40px;
+    background: $bg-alt;
+    border-top: 1px solid $rule;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        h4 {
+            font-family: $mono;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $ink-mute;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14.5px;
+
+        li {
+            color: $ink-soft;
+        }
+
+        a {
+            color: $ink;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-top: 24px;
+        border-top: 1px solid $rule-soft;
+        font-family: $mono;
+        font-size: 12.5px;
+        color: $ink-mute;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Selection
+// ---------------------------------------------------------------------------
+
+::selection {
+    background: $ink;
+    color: $bg;
 }
