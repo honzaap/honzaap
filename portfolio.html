@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- GA script -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CRS19TYTQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-8CRS19TYTQ");
+        </script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Primary Meta Tags -->
+        <title>Jan Pánek — Portfolio</title>
+        <meta name="title" content="Jan Pánek — Portfolio" />
+        <meta
+            name="description"
+            content="Case study portfolio of Jan Pánek — Full-Stack Engineer focused on product development, realtime systems and frontend architecture."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jan-panek.cz/portfolio" />
+        <meta property="og:title" content="Jan Pánek — Portfolio" />
+        <meta
+            property="og:description"
+            content="Case study portfolio of Jan Pánek — Full-Stack Engineer focused on product development, realtime systems and frontend architecture."
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://jan-panek.cz/portfolio" />
+        <meta property="twitter:title" content="Jan Pánek — Portfolio" />
+        <meta
+            property="twitter:description"
+            content="Case study portfolio of Jan Pánek — Full-Stack Engineer focused on product development, realtime systems and frontend architecture."
+        />
+
+        <link rel="icon" href="./favicon.ico" />
+
+        <script type="module" src="./main.js"></script>
+    </head>
+    <body class="portfolio">
+        <a class="skip-link" href="#content">Skip to content</a>
+
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero__name">Jan Pánek</h1>
+                <p class="hero__intro">
+                    Full-stack engineer focused on <b>product development</b>, <b>realtime systems</b> and <b>frontend architecture</b>.
+                    Experience across startup products, internal business systems and enterprise applications. Currently leading development
+                    of a multi-application food delivery platform at
+                    <a href="https://mazatech.cz" target="_blank" rel="noopener">Mazatech</a>
+                    while contributing to enterprise React applications in the energy sector at
+                    <a href="https://www.trask.cz" target="_blank" rel="noopener">Trask</a>.
+                </p>
+
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="/assets/jan-panek-eng.pdf" target="_blank">
+                        <span>Download CV</span>
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                    <a class="btn" href="mailto:paneja2@seznam.cz">paneja2@seznam.cz</a>
+                    <a class="btn" href="tel:+420604305268">+420 604 305 268</a>
+                </div>
+
+                <ul class="hero__links">
+                    <li>
+                        <a href="https://github.com/honzaap" target="_blank" rel="noopener">
+                            <img src="/assets/social/github.svg" alt="" aria-hidden="true" />
+                            <span>github.com/honzaap</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/honzaap/" target="_blank" rel="noopener">
+                            <img src="/assets/social/linkedin.svg" alt="" aria-hidden="true" />
+                            <span>linkedin.com/in/honzaap</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="hero__location">Liberec, Czech Republic</p>
+            </div>
+        </header>
+
+        <main id="content">
+            <!-- Case studies -->
+            <section class="section" aria-labelledby="case-studies">
+                <div class="container">
+                    <div class="section__head">
+                        <h2 id="case-studies" class="section__title">Case studies</h2>
+                    </div>
+
+                    <!-- Foodygo -->
+                    <article class="case" id="foodygo">
+                        <header class="case__head">
+                            <div class="case__title-row">
+                                <h3 class="case__title">Foodygo</h3>
+                            </div>
+                            <a class="case__link" href="https://foodygo.cz" target="_blank" rel="noopener">foodygo.cz ↗</a>
+                            <p class="case__summary">
+                                Multi-application food delivery ecosystem — customer app, restaurant/admin portal, courier app and backend
+                                infrastructure. Built and operated end-to-end at
+                                <a href="https://mazatech.cz" target="_blank" rel="noopener">Mazatech</a>.
+                            </p>
+                            <p class="case__date">Nov 2024 – Present</p>
+                            <ul class="case__meta">
+                                <li><span>Role</span><b>Lead Full-Stack Engineer</b></li>
+                                <li><span>Domain</span><b>Food Delivery</b></li>
+                                <li><span>Stack</span><b>Vue, React Native, .NET, SignalR, Azure</b></li>
+                            </ul>
+                        </header>
+
+                        <div class="case__grid">
+                            <section class="case__block">
+                                <h4>What the system does</h4>
+                                <p>
+                                    A connected ecosystem of four applications that together run the operational workflow of a food delivery
+                                    service:
+                                </p>
+                                <ul class="list">
+                                    <li><b>Customer app</b> — ordering, payments, live order tracking.</li>
+                                    <li>
+                                        <b>Restaurant / admin portal</b> — order management, user administration, accounting, courier
+                                        payouts, invoicing.
+                                    </li>
+                                    <li><b>Courier app</b> — assignment, navigation, status updates, location streaming.</li>
+                                    <li><b>Backend</b> — REST API, realtime layer, integrations, scheduled jobs, deployments.</li>
+                                </ul>
+                            </section>
+
+                            <section class="case__block">
+                                <h4>My role</h4>
+                                <p>
+                                    <b>Lead Full-Stack engineer</b> responsible for backend systems, frontend architecture, realtime
+                                    infrastructure, deployments and technical decisions. Worked directly with the client on feature planning
+                                    and coordinated development across junior developers.
+                                </p>
+                            </section>
+
+                            <section class="case__block case__block--wide">
+                                <h4>Challenges & Key areas</h4>
+                                <ul class="list">
+                                    <li><b>Realtime synchronization</b> between customer, restaurant and courier applications</li>
+                                    <li>Keeping operational workflows <b>reliable</b> during live traffic and order spikes</li>
+                                    <li>
+                                        Czech-specific <b>integrations.</b> GoPay, Moneta, ARES and GoSMS instead of the usual global SDKs,
+                                        each with their own conventions and edge cases.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="case__block case__block--wide">
+                                <h4>Integrations</h4>
+                                <ul class="chips">
+                                    <li><a href="https://www.gopay.com" target="_blank" rel="noopener">GoPay</a> — payment gate</li>
+                                    <li><a href="https://www.moneta.cz" target="_blank" rel="noopener">Moneta</a> — banking</li>
+                                    <li><a href="https://www.gosms.cz" target="_blank" rel="noopener">GoSMS</a> — SMS gate</li>
+                                    <li>
+                                        <a href="https://ares.gov.cz" target="_blank" rel="noopener">ARES</a> — business registry lookup
+                                    </li>
+                                    <li><a href="https://developer.mapy.com/">Mapy API</a> — routing, distance, courier tracking</li>
+                                    <li>Bluetooth thermal printers</li>
+                                    <li>Apple Store Connect &amp; Google Play Console — releases</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Innogy RPM -->
+                    <article class="case" id="innogy">
+                        <header class="case__head">
+                            <div class="case__title-row">
+                                <h3 class="case__title">Innogy RPM</h3>
+                            </div>
+                            <p class="case__summary">
+                                Enterprise React/TypeScript retail portfolio manager for
+                                <a href="https://www.innogy.cz" target="_blank" rel="noopener">Innogy</a>
+                                — a major European energy provider, built at
+                                <a href="https://www.trask.cz" target="_blank" rel="noopener">Trask</a>.
+                            </p>
+                            <p class="case__date">Feb 2026 – Present</p>
+                            <ul class="case__meta">
+                                <li><span>Role</span><b>Frontend Developer</b></li>
+                                <li><span>Domain</span><b>Multi-commodity energy retail</b></li>
+                                <li><span>Stack</span><b>React, TypeScript, Orval, TanStack</b></li>
+                            </ul>
+                        </header>
+
+                        <div class="case__grid">
+                            <section class="case__block">
+                                <h4>What the system does</h4>
+                                <p>
+                                    A large-scale portfolio manager used by an energy retailer to track commodity contracts, positions and
+                                    customer-facing portfolios across multiple commodities. Heavy on data tables, forms and
+                                    cross-application synchronization.
+                                </p>
+                            </section>
+                            <section class="case__block">
+                                <h4>My contribution</h4>
+                                <p>
+                                    Working on frontend features inside a larger React/TypeScript codebase built around generated API
+                                    clients and shared backend contracts. Collaboration across multiple teams requires coordination between
+                                    frontend, backend and release workflows. <br />Most of the day-to-day work revolves around complex
+                                    forms, <b>data-heavy interfaces</b> and keeping <b>server state synchronized</b> across the application.
+                                </p>
+                            </section>
+                            <section class="case__block case__block--wide">
+                                <h4>Notes</h4>
+                                <p>
+                                    Enterprise development shifts the focus away from framework choices and more toward
+                                    <b>long-term maintainability</b>, review processes and coordination across teams and services.
+                                </p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- SMWORKS / Profiltechnik -->
+                    <article class="case" id="profiltechnik">
+                        <header class="case__head">
+                            <div class="case__title-row">
+                                <h3 class="case__title">Profiltechnik CRM</h3>
+                            </div>
+
+                            <p class="case__summary">
+                                Custom CRM and internal operational platform for
+                                <a href="https://www.profiltechnik.cz" target="_blank" rel="noopener">Profiltechnik</a>
+                                — an industrial client, built at <a href="https://smworks.cz" target="_blank" rel="noopener">SMWORKS</a>.
+                            </p>
+                            <p class="case__date">Jul 2021 – Feb 2024</p>
+                            <ul class="case__meta">
+                                <li><span>Role</span><b>Full-Stack Developer</b></li>
+                                <li><span>Domain</span><b>Contract &amp; workflow management</b></li>
+                                <li><span>Stack</span><b>Laravel, Vue, MySQL, PWA</b></li>
+                            </ul>
+                        </header>
+
+                        <div class="case__grid">
+                            <section class="case__block">
+                                <h4>What the system does</h4>
+                                <p>
+                                    Internal operational platform covering contract management, workflow management, employee role and
+                                    access levels, push notifications and accounting synchronization. Used day-to-day to run the business.
+                                </p>
+                            </section>
+                            <section class="case__block">
+                                <h4>My contribution</h4>
+                                <p>
+                                    Worked across frontend, backend and database layers on a long-term internal business platform.
+                                    Contributed to multiple larger project phases, implemented new features, fixed production issues and
+                                    participated in continuous development and releases over several years.
+                                </p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- SMWORKS / E-commerce -->
+                    <article class="case" id="smworks-ecommerce">
+                        <header class="case__head">
+                            <div class="case__title-row">
+                                <h3 class="case__title">E-commerce &amp; commercial web</h3>
+                            </div>
+                            <p class="case__summary">
+                                Production e-commerce stores and corporate websites for commercial clients across Czech industry and retail,
+                                built at <a href="https://smworks.cz" target="_blank" rel="noopener">SMWORKS</a>.
+                            </p>
+                            <p class="case__date">Jul 2021 – Feb 2024</p>
+                            <ul class="case__meta">
+                                <li><span>Role</span><b>Full-Stack Developer</b></li>
+                                <li><span>Domain</span><b>E-commerce, PWAs, corporate web</b></li>
+                                <li><span>Stack</span><b>Laravel, Vue, MySQL</b></li>
+                            </ul>
+                        </header>
+
+                        <div class="case__grid">
+                            <section class="case__block">
+                                <h4>E-commerce</h4>
+                                <p>
+                                    Built and maintained retail e-commerce platforms — catalog, cart, checkout, order management and
+                                    integration with internal systems including <b>Pohoda ERP synchronization</b>.
+                                </p>
+                                <ul class="chips">
+                                    <li><a href="https://www.obchodnisa.cz" target="_blank" rel="noopener">obchodnisa.cz ↗</a></li>
+                                    <li><a href="https://www.maximalshop.cz" target="_blank" rel="noopener">maximalshop.cz ↗</a></li>
+                                </ul>
+                            </section>
+                            <section class="case__block">
+                                <h4>Corporate web &amp; PWAs</h4>
+                                <p>
+                                    Production-ready websites and web apps for regional clients, focused on performance and content
+                                    delivery. Contributed to the development of the company’s internal CMS used across commercial websites
+                                    and e-commerce projects.
+                                </p>
+                                <ul class="chips">
+                                    <li><a href="https://teplarnaliberec.cz" target="_blank" rel="noopener">teplarnaliberec.cz ↗</a></li>
+                                    <li><a href="https://rsvision.cz" target="_blank" rel="noopener">rsvision.cz ↗</a></li>
+                                    <li><a href="https://lioneng.com" target="_blank" rel="noopener">lioneng.com ↗</a></li>
+                                    <li><a href="https://lbnet.cz" target="_blank" rel="noopener">lbnet.cz ↗</a></li>
+                                    <li><a href="https://esthe-laser.com" target="_blank" rel="noopener">esthe-laser.com ↗</a></li>
+                                    <span class="chips__more">...and more</span>
+                                </ul>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Open source -->
+            <section class="section" aria-labelledby="open-source">
+                <div class="container">
+                    <div class="section__head">
+                        <h2 id="open-source" class="section__title">Open source</h2>
+                        <p class="section__note">3.3k+ combined GitHub stars across frontend, visualization and systems projects.</p>
+                    </div>
+
+                    <ul class="projects">
+                        <li>
+                            <a class="project" href="https://github.com/honzaap/Systemizer" target="_blank" rel="noopener">
+                                <div class="project__head">
+                                    <h3 class="project__title">Systemizer</h3>
+                                    <span class="project__stars">★ 1.5k+</span>
+                                </div>
+                                <p class="project__desc">
+                                    Interactive web workspace for simulating and visualizing data flow in distributed systems — load
+                                    balancers, queues, databases, APIs. Built in Angular + TypeScript.
+                                </p>
+                                <ul class="project__tags">
+                                    <li>Microservices</li>
+                                    <li>Systems design</li>
+                                    <li>Visualization</li>
+                                </ul>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project" href="https://github.com/honzaap/Githubcity" target="_blank" rel="noopener">
+                                <div class="project__head">
+                                    <h3 class="project__title">GithubCity</h3>
+                                    <span class="project__stars">★ 1.3k+</span>
+                                </div>
+                                <p class="project__desc">
+                                    Parses a developer's GitHub contribution graph and procedurally generates an interactive 3D city in
+                                    WebGL. JavaScript + Three.js.
+                                </p>
+                                <ul class="project__tags">
+                                    <li>WebGL</li>
+                                    <li>Three.js</li>
+                                    <li>Procedural</li>
+                                </ul>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project" href="https://github.com/honzaap/Pathfinding" target="_blank" rel="noopener">
+                                <div class="project__head">
+                                    <h3 class="project__title">Pathfinding</h3>
+                                    <span class="project__stars">★ 400+</span>
+                                </div>
+                                <p class="project__desc">
+                                    Pathfinding algorithms visualized over real-world map data — A*, Dijkstra and others running on live
+                                    geographic coordinates.
+                                </p>
+                                <ul class="project__tags">
+                                    <li>Algorithms</li>
+                                    <li>Maps</li>
+                                    <li>Visualization</li>
+                                </ul>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project" href="https://github.com/honzaap/Slashsaber" target="_blank" rel="noopener">
+                                <div class="project__head">
+                                    <h3 class="project__title">SlashSaber</h3>
+                                    <span class="project__stars">★ 60+</span>
+                                </div>
+                                <p class="project__desc">Endless browser-based 3D rhythm/slashing game in TypeScript, Vue and Three.js.</p>
+                                <ul class="project__tags">
+                                    <li>Three.js</li>
+                                    <li>Vue</li>
+                                    <li>Game</li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section section--compact" aria-labelledby="education">
+                <div class="container">
+                    <div class="section__head">
+                        <h2 id="education" class="section__title">Education</h2>
+                    </div>
+
+                    <ul class="education">
+                        <li>
+                            <div class="education__when">2023 — 2026</div>
+                            <div class="education__what">
+                                <h4>Technical University of Liberec</h4>
+                                <p>Bachelor's degree, Applied Informatics</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education__when">2019 — 2023</div>
+                            <div class="education__what">
+                                <h4>Secondary Technical School in Liberec</h4>
+                                <p>Information Technology</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education__when">2022</div>
+                            <div class="education__what">
+                                <h4>Cisco Networking Academy</h4>
+                                <p>CCNA: Introduction to Networks</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer__list">
+                            <li><a href="mailto:paneja2@seznam.cz">paneja2@seznam.cz</a></li>
+                            <li><a href="tel:+420604305268">+420 604 305 268</a></li>
+                            <li>Liberec, Czech Republic</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Profiles</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://github.com/honzaap" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/honzaap/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Documents</h4>
+                        <ul class="footer__list">
+                            <li><a href="/assets/jan-panek-eng.pdf">CV</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
